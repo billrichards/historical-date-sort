@@ -1,0 +1,69 @@
+{
+  "name": "historical-date-sort",
+  "version": "1.0.0",
+  "description": "Sort free-form historical date strings across multiple calendar systems using a single numeric sort key",
+  "type": "module",
+  "license": "MIT",
+  "author": "Bill Richards",
+  "engines": { "node": ">=18" },
+  "sideEffects": false,
+  "files": ["dist", "README.md", "LICENSE"],
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs",
+      "types": "./dist/index.d.ts"
+    },
+    "./gregorian": {
+      "import": "./dist/plugins/gregorian.js",
+      "require": "./dist/plugins/gregorian.cjs",
+      "types": "./dist/plugins/gregorian.d.ts"
+    },
+    "./islamic": {
+      "import": "./dist/plugins/islamic.js",
+      "require": "./dist/plugins/islamic.cjs",
+      "types": "./dist/plugins/islamic.d.ts"
+    },
+    "./hebrew": {
+      "import": "./dist/plugins/hebrew.js",
+      "require": "./dist/plugins/hebrew.cjs",
+      "types": "./dist/plugins/hebrew.d.ts"
+    },
+    "./roman": {
+      "import": "./dist/plugins/roman.js",
+      "require": "./dist/plugins/roman.cjs",
+      "types": "./dist/plugins/roman.d.ts"
+    },
+    "./japanese": {
+      "import": "./dist/plugins/japanese.js",
+      "require": "./dist/plugins/japanese.cjs",
+      "types": "./dist/plugins/japanese.d.ts"
+    },
+    "./regnal": {
+      "import": "./dist/plugins/regnal.js",
+      "require": "./dist/plugins/regnal.cjs",
+      "types": "./dist/plugins/regnal.d.ts"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "historical", "date", "sort", "BCE", "BC", "calendar",
+    "museum", "archaeology", "archive", "islamic", "hebrew",
+    "japanese", "roman", "regnal", "era", "manuscript"
+  ],
+  "devDependencies": {
+    "@types/node": "^22",
+    "@vitest/coverage-v8": "^4",
+    "tsup": "^8",
+    "typescript": "^5",
+    "vitest": "^4"
+  }
+}
