@@ -2,14 +2,16 @@
 title = "historical-date-sort secrets detection"
 
 # Allow specific patterns
-allowlist = [
-  # Package.json scripts may contain npm run commands
-  {file = "package\\.json"},
-  # Test files may contain example tokens  
-  {path = "test/.*"},
-  {path = "__tests__/.*"},
-  {path = ".*\\.test\\..*"},
-  {path = ".*\\.spec\\..*"}
+[allowlist]
+description = "Allowlist for test files and package.json"
+paths = [
+  "test/.*",
+  "__tests__/.*",
+  ".*\\.test\\..*",
+  ".*\\.spec\\..*"
+]
+files = [
+  "package\\.json"
 ]
 
 [[rules]]
