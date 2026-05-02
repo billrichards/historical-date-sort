@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [18.x, 20.x, 22.x]
+        node-version: [20.x, 22.x]
 
     steps:
     - name: Checkout repository
@@ -77,11 +77,15 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
 
     - name: Run npm audit
       run: npm audit --audit-level=moderate || true
 
-    - name: Check for secrets
+    - name: Detect secrets with gitleaks
       uses: gitleaks/gitleaks-action@v2
       with:
         config-path: .gitleaks.toml
+      env:
+        GITLEAKS_LICENSE: ${{ secrets.GITLEAKS_LICENSE }}

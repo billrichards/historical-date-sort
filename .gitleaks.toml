@@ -1,6 +1,17 @@
 # Gitleaks configuration for historical-date-sort
 title = "historical-date-sort secrets detection"
 
+# Allow specific patterns
+allowlist = [
+  # Package.json scripts may contain npm run commands
+  {file = "package\\.json"},
+  # Test files may contain example tokens  
+  {path = "test/.*"},
+  {path = "__tests__/.*"},
+  {path = ".*\\.test\\..*"},
+  {path = ".*\\.spec\\..*"}
+]
+
 [[rules]]
 id = "generic-api-key"
 description = "Generic API Key"
@@ -30,12 +41,3 @@ id = "private-key"
 description = "Private Key"
 regex = '''-----BEGIN[ A-Z]*PRIVATE KEY-----'''
 tags = ["key", "crypto"]
-
-# Allowlist specific patterns
-[[allowlist]]
-description = "Package.json scripts may contain npm run commands"
-paths = ['''package\.json''']
-
-[[allowlist]]
-description = "Test files may contain example tokens"
-paths = ['''test/''', '''__tests__/''', '''\.test\.''', '''\.spec\.''']
