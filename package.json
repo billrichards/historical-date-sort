@@ -5,44 +5,52 @@
   "type": "module",
   "license": "MIT",
   "author": "Bill Richards",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/billrichards/historical-date-sort.git"
+  },
+  "homepage": "https://github.com/billrichards/historical-date-sort#readme",
+  "bugs": {
+    "url": "https://github.com/billrichards/historical-date-sort/issues"
+  },
   "engines": { "node": ">=18" },
   "sideEffects": false,
   "files": ["dist", "README.md", "LICENSE"],
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "import": "./dist/index.js",
-      "require": "./dist/index.cjs",
-      "types": "./dist/index.d.ts"
+      "require": "./dist/index.cjs"
     },
     "./gregorian": {
+      "types": "./dist/plugins/gregorian.d.ts",
       "import": "./dist/plugins/gregorian.js",
-      "require": "./dist/plugins/gregorian.cjs",
-      "types": "./dist/plugins/gregorian.d.ts"
+      "require": "./dist/plugins/gregorian.cjs"
     },
     "./islamic": {
+      "types": "./dist/plugins/islamic.d.ts",
       "import": "./dist/plugins/islamic.js",
-      "require": "./dist/plugins/islamic.cjs",
-      "types": "./dist/plugins/islamic.d.ts"
+      "require": "./dist/plugins/islamic.cjs"
     },
     "./hebrew": {
+      "types": "./dist/plugins/hebrew.d.ts",
       "import": "./dist/plugins/hebrew.js",
-      "require": "./dist/plugins/hebrew.cjs",
-      "types": "./dist/plugins/hebrew.d.ts"
+      "require": "./dist/plugins/hebrew.cjs"
     },
     "./roman": {
+      "types": "./dist/plugins/roman.d.ts",
       "import": "./dist/plugins/roman.js",
-      "require": "./dist/plugins/roman.cjs",
-      "types": "./dist/plugins/roman.d.ts"
+      "require": "./dist/plugins/roman.cjs"
     },
     "./japanese": {
+      "types": "./dist/plugins/japanese.d.ts",
       "import": "./dist/plugins/japanese.js",
-      "require": "./dist/plugins/japanese.cjs",
-      "types": "./dist/plugins/japanese.d.ts"
+      "require": "./dist/plugins/japanese.cjs"
     },
     "./regnal": {
+      "types": "./dist/plugins/regnal.d.ts",
       "import": "./dist/plugins/regnal.js",
-      "require": "./dist/plugins/regnal.cjs",
-      "types": "./dist/plugins/regnal.d.ts"
+      "require": "./dist/plugins/regnal.cjs"
     }
   },
   "main": "./dist/index.cjs",
