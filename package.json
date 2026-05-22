@@ -1,6 +1,6 @@
 {
   "name": "historical-date-sort",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Sort free-form historical date strings across multiple calendar systems using a single numeric sort key",
   "type": "module",
   "license": "MIT",
@@ -13,13 +13,19 @@
   "bugs": {
     "url": "https://github.com/billrichards/historical-date-sort/issues"
   },
-  "engines": { "node": ">=18" },
+  "engines": {
+    "node": ">=18"
+  },
   "sideEffects": false,
   "publishConfig": {
     "access": "public",
     "provenance": true
   },
-  "files": ["dist", "README.md", "LICENSE"],
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -67,9 +73,22 @@
     "typecheck": "tsc --noEmit"
   },
   "keywords": [
-    "historical", "date", "sort", "BCE", "BC", "calendar",
-    "museum", "archaeology", "archive", "islamic", "hebrew",
-    "japanese", "roman", "regnal", "era", "manuscript"
+    "historical",
+    "date",
+    "sort",
+    "BCE",
+    "BC",
+    "calendar",
+    "museum",
+    "archaeology",
+    "archive",
+    "islamic",
+    "hebrew",
+    "japanese",
+    "roman",
+    "regnal",
+    "era",
+    "manuscript"
   ],
   "devDependencies": {
     "@types/node": "^22",
